@@ -9,40 +9,69 @@
     </head>
     <body>
         <header>
-            <h1>Money Management</h1>
+            <h1 id="header">Money Management</h1>
         </header>
 
         <main>
-            <section>
-                <form class="tambah box">
-                    <h2 id="title">Tambah transaksi</h2>
-                    <label for="tanggal">Tanggal</label>
-                    <input type="date" id="tanggal" required>
+            <section class="money box">
+                <h2 class="title">Pendapatan Bersih</h2>
+                <h2 id="bersih">Rp0</h2>
 
-                    <label for="ktr">Kategori</label>
-                    <select id="ktr">
-                        <option>Makan</option>
-                        <option>Kos</option>
-                        <option>Bensin</option>
-                        <option>Servis</option>
-                        <option>Parkir</option>
-                    </select>
-                    <label for="tipe">Tipe</label>
-                    <div class="radio">
-                        <input name="tipe" type="radio" value="Pemasukan" id="pemasukan" required>
-                        <label for="pemasukan">Pemasukan</label>
-                        <input name="tipe"type="radio" value="Pengeluaran Operasional" id="operasional">
-                        <label for="operasional">Pengeluaran Operasional</label>
-                        <input name="tipe"type="radio" value="Pengeluaran Pribadi" id="pribadi">
-                        <label for="pribadi">Pengeluaran Pribadi</label>
+                <div class="split">
+                    <div id="total" class="box">
+                        <h3>Omset</h3>
+                        <p>Rp0</p>
                     </div>
-                    <label for="nom">Nominal</label>
-                    <input type="text" inputmode="numeric" placeholder="50000" id="nom"required>
-                    <label for="catatan">Catatan</label>
-                    <input type="text" id="catatan">
-                    <button id="add" type="submit">Tambah</button>
-                </form>
+                    <div id="operasional" class="box">
+                        <h3>Pengeluaran Operasional</h3>
+                        <p>Rp0</p>
+
+                    </div>
+                    <div id="pribadi" class="box">
+                        <h3>Pengeluaran Pribadi</h3>
+                        <p>Rp0</p>
+                    </div>
+                </div>
             </section>
+
+            <div class="transaksi">
+                <section>
+                    <form class="tambah box">
+                        <h2 class="title">Tambah transaksi</h2>
+                        <label for="tanggal">Tanggal</label>
+                        <input type="date" id="tanggal" required>
+
+                        <label for="ktr">Kategori</label>
+                        <select id="ktr">
+                            <option>Makan</option>
+                            <option>Kos</option>
+                            <option>Bensin</option>
+                            <option>Servis</option>
+                            <option>Parkir</option>
+                            <option>Hasil Orderan</option>
+                            <option>Tips Penumpang</option>
+                        </select>
+                        <label for="tipe">Tipe</label>
+                        <div class="radio">
+                            <input name="tipe" type="radio" value="Pemasukan" id="pemasukan" required>
+                            <label for="pemasukan">Pemasukan</label>
+                            <input name="tipe"type="radio" value="Pengeluaran Operasional" id="operasional">
+                            <label for="operasional">Pengeluaran Operasional</label>
+                            <input name="tipe"type="radio" value="Pengeluaran Pribadi" id="pribadi">
+                            <label for="pribadi">Pengeluaran Pribadi</label>
+                        </div>
+                        <label for="nom">Nominal</label>
+                        <input type="text" inputmode="numeric" placeholder="50000" id="nom"required>
+                        <label for="catatan">Catatan</label>
+                        <input type="text" id="catatan">
+                        <button id="add" type="submit">Tambah</button>
+                    </form>
+                </section>
+                <section class="riwayat box">
+                    <h2 class="title">Riwayat</h2>
+
+                </section>
+            </div>
         </main>
     </body>
 </html>

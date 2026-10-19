@@ -1,45 +1,270 @@
+:root {
+    --bg: #f4f4f2;
+    --surface: #ffffff;
+    --text: #25272a;
+    --muted: #6b6f73;
+    --line: #d6d6d2;
+    --masuk: #3f7a5a;
+    --masuk-bg: #e6efe9;
+    --keluar: #9b4f49;
+    --keluar-bg: #f1e7e5;
+}
+
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.box {
-    border: 2px solid gray;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-main {
-    margin: 20px;
-}
-
-h1 {
-    color: brown;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: aquamarine;
-    padding: 0 15px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    padding: 0 20px;
 }
 
 nav {
     display: flex;
+}
+
+h1 {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#header {
+    margin: 16px 0;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-#title {
-    display: inline;
-    margin:0;
+.box {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px;
 }
+
+.title {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.money {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#bersih {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.split .box {
+    background: var(--bg);
+}
+
+.split h3 {
+    margin: 0 0 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.split p {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.transaksi {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
 .tambah {
     display: flex;
     flex-direction: column;
-    width: 20em;
     gap: 10px;
+}
+
+.tambah label {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.tambah input:not([type="radio"]),
+.tambah select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 6px 8px;
+}
+
+.radio label {
+    color: var(--text);
+}
+
+#add {
+    margin-top: 6px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: var(--text);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#add:hover {
+    background: #3b3e42;
+}
+
+.riwayat {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left-width: 5px;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card.pemasukan {
+    border-left-color: var(--masuk);
+}
+
+.card.pengeluaran {
+    border-left-color: var(--keluar);
+}
+
+.card .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px 8px;
+    font-size: 1rem;
+}
+
+.card .title p {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.kategori {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.tipe {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.pemasukan .tipe {
+    background: var(--masuk-bg);
+    color: var(--masuk);
+}
+
+.pengeluaran .tipe {
+    background: var(--keluar-bg);
+    color: var(--keluar);
+}
+
+.nominal {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.pemasukan .nominal {
+    color: var(--masuk);
+}
+
+.pengeluaran .nominal {
+    color: var(--keluar);
+}
+
+.catatan {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+.hapus {
+    align-self: flex-start;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    color: var(--keluar);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hapus:hover {
+    background: var(--keluar-bg);
+}
+
+.kosong {
+    margin: 0;
+    color: var(--muted);
+}
+
+@media (max-width: 800px) {
+    .transaksi {
+        grid-template-columns: 1fr;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+    }
 }
