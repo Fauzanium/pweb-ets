@@ -8,18 +8,41 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <header class="box">
+        <header>
             <h1>Money Management</h1>
-            <nav>
-                <a>Beranda</a>
-                <a>Tentang</a>
-                <a>Tentang</a>
-            </nav>
         </header>
 
         <main>
+            <section>
+                <form class="tambah box">
+                    <h2 id="title">Tambah transaksi</h2>
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" id="tanggal" required>
 
+                    <label for="ktr">Kategori</label>
+                    <select id="ktr">
+                        <option>Makan</option>
+                        <option>Kos</option>
+                        <option>Bensin</option>
+                        <option>Servis</option>
+                        <option>Parkir</option>
+                    </select>
+                    <label for="tipe">Tipe</label>
+                    <div class="radio">
+                        <input name="tipe" type="radio" value="Pemasukan" id="pemasukan" required>
+                        <label for="pemasukan">Pemasukan</label>
+                        <input name="tipe"type="radio" value="Pengeluaran Operasional" id="operasional">
+                        <label for="operasional">Pengeluaran Operasional</label>
+                        <input name="tipe"type="radio" value="Pengeluaran Pribadi" id="pribadi">
+                        <label for="pribadi">Pengeluaran Pribadi</label>
+                    </div>
+                    <label for="nom">Nominal</label>
+                    <input type="text" inputmode="numeric" placeholder="50000" id="nom"required>
+                    <label for="catatan">Catatan</label>
+                    <input type="text" id="catatan">
+                    <button id="add" type="submit">Tambah</button>
+                </form>
+            </section>
         </main>
-
     </body>
 </html>

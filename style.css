@@ -2,6 +2,16 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.box {
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+main {
+    margin: 20px;
+}
+
 h1 {
     color: brown;
 }
@@ -21,4 +31,15 @@ header {
 nav {
     display: flex;
     gap: 20px;
+}
+
+#title {
+    display: inline;
+    margin:0;
+}
+.tambah {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    gap: 10px;
 }
